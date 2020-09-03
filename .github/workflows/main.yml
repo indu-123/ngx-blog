@@ -52,3 +52,8 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist/ngx-blog
+      - name: Archive Release
+        uses: thedoctor0/zip-release@master
+        with:
+          path: "dist/ngx-blog"
+          filename: 'release.zip'
