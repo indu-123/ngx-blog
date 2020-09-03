@@ -45,7 +45,7 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           artifacts: "dist/angular-githubaction/*"
-          token: ${{ secrets.TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
